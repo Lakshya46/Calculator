@@ -12,8 +12,8 @@ This app is created by using kotlin
 ## Screenshots
 Include screenshots of your app to give users a visual representation of what to expect.
 
-<img alt="Screenshot 1" src="C:\Users\laksh\appchapter\final project\Calculator2\app\src\main\res\drawable\scree_one.png"/>
-<img alt="Screenshot 2" src="C:\Users\laksh\appchapter\final project\Calculator2\app\src\main\res\drawable\Screentwo.png"/>
+![Screenshot 1](C:\Users\laksh\appchapter\final project\Calculator2\app\src\main\res\drawable\scree_one.png)
+![Screenshot 2](C:\Users\laksh\appchapter\final project\Calculator2\app\src\main\res\drawable\Screentwo.png)
 
 ## Installation
 1. Clone or download the repository.
