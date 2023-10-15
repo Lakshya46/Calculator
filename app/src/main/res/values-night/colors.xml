@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <resources>
+        <color name="fbtn">#616161</color>
+        <color name="fbtntxt">#bdbdbd</color>
+        <color name="opbtn">#077634</color>
+        <color name="digit_btn">#303136</color>
+        <color name="Background">#17181a</color>
+        <color name="black">#FF000000</color>
+        <color name="white">#FFFFFFFF</color>
+        <color name="digit_text">#079f45</color>
+        <color name="result">#ffffff</color>
+        <color name="data">#8e8f90</color>
+
+    </resources>

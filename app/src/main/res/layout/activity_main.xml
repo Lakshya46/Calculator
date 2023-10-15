@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    tools:context=".MainActivity">
+
+
+
+        <TextView
+            android:id="@+id/dataText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/resultText"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:textAlignment="textEnd"
+            android:textColor="@color/data"
+            android:textSize="40sp" />
+
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttons_layout"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textColor="@color/result"
+        android:textSize="64sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="10dp"
+        android:id="@+id/buttons_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:background="@drawable/fbutton"
+                android:elevation="3dp">
+
+                <Button
+                    android:id="@+id/backspace"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="12dp"
+                    android:onClick="onBackClick"
+                    android:background="@drawable/outline_backspace_24"
+                    android:contentDescription="@string/app_name"
+                    app:cornerRadius="36dp" />
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                android:textSize="32dp"
+                android:textColor="@color/fbtntxt"
+                android:layout_margin="12dp"
+                android:id="@+id/button_c"
+                android:background="@drawable/fbutton"
+                android:onClick="onClearClick"
+                android:text="C" />
+
+
+
+            <Button
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                android:textSize="32sp"
+                android:textColor="@color/fbtntxt"
+                android:background="@drawable/fbutton"
+                android:layout_margin="12dp"
+                android:id="@+id/button_allclear"
+                android:onClick="onAllclearClick"
+                android:text="AC"
+                />
+            <Button
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                android:textSize="32dp"
+                android:background="@drawable/operationbutton"
+                android:textColor="@color/white"
+                android:layout_margin="12dp"
+                android:id="@+id/button_divide"
+                android:onClick="onOperatorClick"
+                android:text="/" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_7"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+
+                android:background="@drawable/digitbutton"
+                android:text="7"
+                android:textColor="@color/digit_text"
+                android:textSize="32dp"
+                android:onClick="OnDigitClick"
+                app:cornerRadius="360dp" />
+
+            <Button
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+
+                android:textSize="32dp"
+                android:layout_margin="12dp"
+                android:textColor="@color/digit_text"
+                android:background="@drawable/digitbutton"
+                android:onClick="OnDigitClick"
+                android:id="@+id/button_8"
+                android:text="8" />
+            <Button
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+
+                android:textSize="32dp"
+                android:layout_margin="12dp"
+                android:id="@+id/button_9"
+                android:textColor="@color/digit_text"
+                android:onClick="OnDigitClick"
+                android:background="@drawable/digitbutton"
+                android:text="9" />
+            <Button
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+
+                android:textSize="32dp"
+                android:textColor="@color/white"
+                android:layout_margin="12dp"
+                android:background="@drawable/operationbutton"
+android:onClick="onOperatorClick"
+                android:id="@+id/button_multiply"
+                android:text="*" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+
+                android:textSize="32dp"
+                android:textColor="@color/digit_text"
+                android:background="@drawable/digitbutton"
+                android:layout_margin="12dp"
+                android:id="@+id/button_4"
+                android:onClick="OnDigitClick"
+                android:text="4" />
+            <Button
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+
+                android:textSize="32dp"
+                android:layout_margin="12dp"
+                android:id="@+id/button_5"
+                android:textColor="@color/digit_text"
+                android:background="@drawable/digitbutton"
+                android:onClick="OnDigitClick"
+                android:text="5" />
+            <Button
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+
+                android:textSize="32dp"
+                android:layout_margin="12dp"
+                android:onClick="OnDigitClick"
+                android:id="@+id/button_6"
+                android:textColor="@color/digit_text"
+                android:background="@drawable/digitbutton"
+                android:text="6" />
+            <Button
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                android:textSize="32sp"
+                android:textColor="@color/white"
+                android:layout_margin="12dp"
+                android:id="@+id/button_plus"
+android:onClick="onOperatorClick"
+                android:background="@drawable/operationbutton"
+
+                android:text="+" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                android:textSize="32dp"
+
+                android:layout_margin="12dp"
+                android:id="@+id/button_1"
+                android:textColor="@color/digit_text"
+                android:background="@drawable/digitbutton"
+                android:onClick="OnDigitClick"
+                android:text="1" />
+            <Button
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                android:textSize="32dp"
+
+                android:textColor="@color/digit_text"
+                android:background="@drawable/digitbutton"
+                android:layout_margin="12dp"
+                android:id="@+id/button_2"
+                android:onClick="OnDigitClick"
+                android:text="2" />
+            <Button
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                android:textSize="32dp"
+                android:layout_margin="12dp"
+                android:id="@+id/button_3"
+                android:onClick="OnDigitClick"
+                android:textColor="@color/digit_text"
+                android:background="@drawable/digitbutton"
+                android:text="3" />
+            <Button
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                android:textSize="32dp"
+                android:textColor="@color/white"
+                android:layout_margin="12dp"
+                android:id="@+id/button_minus"
+                android:onClick="onOperatorClick"
+                android:background="@drawable/operationbutton"
+                android:text="-" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                android:textSize="32sp"
+                android:layout_margin="12dp"
+                android:id="@+id/button_ac"
+                android:textColor="@color/digit_text"
+                android:background="@drawable/digitbutton"
+                android:onClick="OnDigitClick"
+                android:text="00" />
+            <Button
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                android:textSize="32dp"
+                android:layout_margin="12dp"
+                android:id="@+id/button_0"
+                android:textColor="@color/digit_text"
+                android:background="@drawable/digitbutton"
+                android:onClick="OnDigitClick"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/button_dot"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:text="."
+                android:textSize="32dp"
+                android:onClick="OnDigitClick"
+                android:textColor="@color/digit_text"
+                android:background="@drawable/digitbutton"
+                app:cornerRadius="36dp" />
+
+            <Button
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                android:textSize="32sp"
+                android:textColor="@color/white"
+                android:layout_margin="12dp"
+                android:id="@+id/button_equals"
+                android:background="@drawable/operationbutton"
+                android:onClick="onEqualClick"
+                android:text="=" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+
+
